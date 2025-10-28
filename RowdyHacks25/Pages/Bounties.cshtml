@@ -1,0 +1,178 @@
+﻿@page
+@model RowdyHacks25.Pages.BountiesModel
+@{
+    ViewData["Title"] = "Bounty List";
+}
+
+@section Scripts {
+    <script>
+        // Optional: auto-refresh only when not paginated or searching
+        if (window.location.search === "") {
+            setTimeout(() => window.location.reload(), 30000);
+        }
+    </script>
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+<div class="space-card" style="max-width: 1200px; margin: auto;">
+
+    <h1 class="space-title">🪐 Active Bounties</h1>
+
+    <!-- Search bar -->
+    <form method="get" class="mb-4" style="display:flex; justify-content:center; gap:10px;">
+        <input type="text" name="q" value="@Model.q" placeholder="Search bounties..."
+               style="padding:8px 12px; border-radius:8px; border:1px solid #444; width:300px; background:#111; color:#fff;">
+        <button type="submit" class="space-btn">Search</button>
+    </form>
+
+    <!-- New bounty button -->
+    <div class="mb-4" style="text-align:center;">
+        <a href="/CreateBounty" class="space-btn">+ Post New Bounty</a>
+    </div>
+
+    <!-- Results summary -->
+    <p style="text-align:center; color:#aaa; font-size:0.9em;">
+        Showing @Model.Bounties.Count of @Model.NumberOfBounties total results
+    </p>
+
+    <!-- Table -->
+    <div class="table-responsive">
+        <table class="space-table" style="width:100%; border-collapse:collapse; color:#ddd;">
+            <thead>
+                <tr style="background:#111;">
+                    <th>Target Name</th>
+                    <th>Planet</th>
+                    <th>Reward</th>
+                    <th>Danger Level</th>
+                    <th>Status</th>
+                    <th>Posted By</th>
+                    <th>Claimed By</th>
+                    <th class="actions">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!Model.Bounties.Any())
+                {
+                    <tr>
+                        <td colspan="8" style="text-align:center; padding:20px; color:#888;">
+                            No bounties found.
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var b in Model.Bounties)
+                    {
+                        <tr style="border-bottom:1px solid #333;">
+                            <td>@b.TargetName</td>
+                            <td>@b.Planet</td>
+                            <td>@b.Reward</td>
+                            <td>@b.DangerLevel</td>
+                            <td>@b.Status</td>
+                            <td>@b.PostedBy</td>
+                            <td>@b.ClaimedBy</td>
+                            <td>
+                                <div class="btn-group" style="display:flex; gap:6px;">
+                                    <a href="/ViewBounty?id=@b.Id" class="space-btn me-2">View</a>
+                                    @if (Model.IsOwner(b.ManagerId))
+                                    {
+                                        <form method="post" style="display:inline;">
+                                            <button type="submit"
+                                                    class="space-btn space-btn-danger"
+                                                    asp-page-handler="Delete"
+                                                    asp-route-id="@b.Id"
+                                                    asp-route-q="@Model.q"
+                                                    asp-route-pageNumber="@Model.pageNumber">
+                                                Delete
+                                            </button>
+                                        </form>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination" style="text-align:center; margin-top:25px;">
+        @if (Model.TotalPages > 1)
+        {
+            <div style="display:inline-flex; align-items:center; gap:10px;">
+                @if (Model.pageNumber > 1)
+                {
+                    <a class="space-btn" href="?q=@Model.q&pageNumber=@(Model.pageNumber - 1)">← Previous</a>
+                }
+
+                <span style="color:#aaa;">
+                    Page @Model.pageNumber of @Model.TotalPages
+                </span>
+
+                @if (Model.pageNumber < Model.TotalPages)
+                {
+                    <a class="space-btn" href="?q=@Model.q&pageNumber=@(Model.pageNumber + 1)">Next →</a>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .space-card {
+        background: radial-gradient(circle at center, #111 0%, #000 100%);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .space-title {
+        color: #00ffff;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 0 8px #00ffff;
+    }
+
+    .space-btn {
+        background: linear-gradient(90deg, #00ffff, #0077ff);
+        color: #000;
+        font-weight: bold;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+
+        .space-btn:hover {
+            background: linear-gradient(90deg, #0077ff, #00ffff);
+            transform: scale(1.05);
+        }
+
+    .space-btn-danger {
+        background: linear-gradient(90deg, #ff0055, #ff6600);
+        color: white;
+    }
+
+        .space-btn-danger:hover {
+            background: linear-gradient(90deg, #ff6600, #ff0055);
+            transform: scale(1.05);
+        }
+
+    .space-table th, .space-table td {
+        padding: 10px 12px;
+        text-align: center;
+    }
+
+    .space-table th {
+        color: #00ffff;
+        text-shadow: 0 0 6px #00ffff;
+    }
+
+    .space-table tr:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+</style>

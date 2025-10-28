@@ -1,0 +1,104 @@
+{
+  "bounties": [
+    {
+      "id": 1,
+      "targetName": "Monster",
+      "planet": "MonsterPlanet",
+      "reward": 9900,
+      "dangerLevel": "Medium",
+      "status": "Open",
+      "postedBy": "Admin",
+      "imageUrl": "",
+      "managerId": "",
+      "createdAt": "2025-10-26T00:20:02.875822Z"
+    },
+    {
+      "id": 3,
+      "targetName": "Saurav",
+      "planet": "Nepal",
+      "reward": 2000,
+      "dangerLevel": "Low",
+      "status": "Open",
+      "postedBy": "",
+      "imageUrl": "https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/6483bb973b8f65001ea4755f.jpg",
+      "managerId": "",
+      "createdAt": "2025-10-26T00:20:02.875874Z"
+    },
+    {
+      "id": 4,
+      "targetName": "Saurav",
+      "planet": "Nepal",
+      "reward": 500,
+      "dangerLevel": "Low",
+      "status": "Open",
+      "postedBy": "",
+      "imageUrl": "https://ih1.redbubble.net/image.2089288114.9241/flat,750x,075,f-pad,750x1000,f8f8f8.webp",
+      "managerId": "",
+      "createdAt": "2025-10-26T00:20:02.875878Z"
+    },
+    {
+      "id": 5,
+      "targetName": "Saurav",
+      "planet": "Nepal",
+      "reward": 500,
+      "dangerLevel": "Low",
+      "status": "Open",
+      "postedBy": "",
+      "imageUrl": "https://i.imgflip.com/8qhyg8.png",
+      "managerId": "",
+      "createdAt": "2025-10-26T00:20:02.875884Z"
+    },
+    {
+      "id": 6,
+      "targetName": "Jesus",
+      "planet": "Mexico",
+      "reward": 200,
+      "dangerLevel": "Extreme",
+      "status": "Open",
+      "postedBy": "Verified Owner",
+      "imageUrl": "https://www.divineuk.org/wp-content/uploads/2024/02/jesus-816x1024.jpg",
+      "managerId": "f44130710ad662447492be33599706291da4a189aca8a0621a7b0e82aaa4f3f7",
+      "createdAt": "2025-10-26T00:20:02.878424Z"
+    },
+    {
+      "id": 7,
+      "targetName": "asudjasdj",
+      "planet": "asdasd",
+      "reward": 432000,
+      "dangerLevel": "Extreme",
+      "status": "Open",
+      "postedBy": "Verified Owner",
+      "imageUrl": "https://www.divineuk.org/wp-content/uploads/2024/02/jesus-816x1024.jpg",
+      "managerId": "f44130710ad662447492be33599706291da4a189aca8a0621a7b0e82aaa4f3f7",
+      "createdAt": "2025-10-26T02:20:06.075385Z"
+    },
+    {
+      "id": 8,
+      "targetName": "Test",
+      "planet": "tt",
+      "reward": 1100,
+      "dangerLevel": "High",
+      "status": "Open",
+      "postedBy": "Verified Owner",
+      "imageUrl": "https://www.divineuk.org/wp-content/uploads/2024/02/jesus-816x1024.jpg",
+      "bio": "The bio goes here the bio goes here The bio Goes here",
+      "managerId": "f44130710ad662447492be33599706291da4a189aca8a0621a7b0e82aaa4f3f7",
+      "createdAt": "2025-10-26T15:55:33.5583741Z"
+    },
+    {
+      "id": 9,
+      "targetName": "Spike",
+      "planet": "Vega",
+      "reward": 10000,
+      "dangerLevel": "Extreme",
+      "status": "Open",
+      "postedBy": "Verified Owner",
+      "imageUrl": "https://static.wikia.nocookie.net/disneythehunchbackofnotredame/images/0/00/Screen_Shot_2013-12-11_at_12_52_29_PM.png",
+      "bio": "Spike Spiegel \u2013 The Fallen Cowboy\r\n\r\nSpike Spiegel is the enigmatic, effortlessly cool protagonist of Cowboy Bebop, the 1998 anime series created by Shinichir\u014D Watanabe. A former hitman of the Red Dragon Crime Syndicate, Spike\u2019s life is one long cigarette trail of regret, danger, and unresolved love. With his sharp wit, deadpan humor, and unflappable calm, he drifts through the solar system as a bounty hunter aboard the spaceship Bebop, chasing criminals for cash \u2014 and ghosts from his past.\r\n\r\nEarly Life and Red Dragon Past\r\n\r\nLittle is known about Spike\u2019s early life before his time in the Red Dragon Syndicate. What is clear is that he was once one of its most promising assassins, known for his sharp instincts, hand-to-hand prowess, and unmatched marksmanship. Alongside his partner, Vicious, Spike carried out high-profile hits for the organization. However, their friendship fractured over their shared affection for Julia, a woman tied deeply to both men\u2019s fates.\r\n\r\nJulia represented everything Spike wanted \u2014 freedom, redemption, love \u2014 but also everything he couldn\u2019t have. When the Syndicate ordered her to kill him as punishment for betrayal, she disappeared instead. Believing her dead, Spike faked his own death and left the Syndicate, beginning a new life among the stars.\r\n\r\nLife Aboard the Bebop\r\n\r\nYears later, Spike finds himself aboard the Bebop with Jet Black, a former ISSP (Inter-Solar System Police) officer who turned to bounty hunting. Their dynamic is one of pragmatic camaraderie \u2014 Jet being the grounded, rational father figure to Spike\u2019s reckless, impulsive gunslinger.\r\n\r\nOver time, they are joined by other misfits: Faye Valentine, the sly and seductive con artist with memory loss; Edward Wong Hau Pepelu Tivrusky IV, the eccentric teenage hacker; and Ein, a genetically enhanced \u201Cdata dog.\u201D Together, they form a dysfunctional yet strangely endearing crew, wandering from planet to planet, often broke, hungry, and arguing \u2014 but always together.\r\n\r\nDespite his nonchalant exterior, Spike carries a deep melancholy. He lives as if already dead, famously saying,\r\n\r\n\u201CI\u2019m not going there to die. I\u2019m going to find out if I\u2019m really alive.\u201D\r\n\r\nPersonality and Skills\r\n\r\nSpike embodies the archetype of the tragic antihero \u2014 part gunslinger, part philosopher. His lazy demeanor hides a dangerous lethality; his Jeet Kune Do-inspired fighting style mirrors Bruce Lee\u2019s philosophy of \u201Cbeing like water.\u201D Whether dodging bullets, piloting his ship Swordfish II, or improvising in a firefight, Spike is always fluid and adaptive.\r\n\r\nHis vices \u2014 smoking, sarcasm, and indifference \u2014 mask an almost existential pain. He often compares life to a dream he can\u2019t wake from, suggesting a man detached from reality, living only for the next fight or fleeting thrill. Beneath that detachment lies fierce loyalty and a heart that still aches for Julia and the life he lost.\r\n\r\nFate and Legacy\r\n\r\nThe final confrontation between Spike and Vicious in the Red Dragon headquarters brings his story full circle. After Julia\u2019s death, Spike returns to settle his past once and for all, cutting through Syndicate soldiers in a storm of gunfire and blood. The final image \u2014 Spike collapsing after whispering \u201CBang\u201D with his finger as a gun \u2014 leaves his fate ambiguous, cementing him as one of anime\u2019s most iconic tragic heroes.\r\n\r\nSymbolism and Influence\r\n\r\nSpike Spiegel represents the quintessential space cowboy: a blend of East and West, noir and jazz, past and future. His character echoes the drifting samurai, the lone gunman, and the fallen angel archetypes. Everything about him \u2014 his green hair, his rumpled blue suit, his jazz-inspired rhythm \u2014 reflects Cowboy Bebop\u2019s fusion of style and sorrow.\r\n\r\nEven decades later, Spike\u2019s legacy endures as one of anime\u2019s most beloved figures \u2014 a symbol of cool detachment, emotional depth, and poetic fatalism. His story isn\u2019t about victory or redemption; it\u2019s about confronting the ghosts that haunt you, even if it kills you.\r\n\r\n\u201CWhatever happens, happens.\u201D\r\n\u2014 Spike Spiegel",
+      "summary": "Bounty target: Spike Spiegel, wanted by a verified owner. Highly dangerous, with extreme risk involved in apprehension. Known for lethal combat skills and Red Dragon Syndicate affiliations. Last located on planet Vega. Subject is considered armed and evasive. Reward is significant; suitable for seasoned bounty hunters.",
+      "managerId": "f44130710ad662447492be33599706291da4a189aca8a0621a7b0e82aaa4f3f7",
+      "createdAt": "2025-10-26T16:12:12.1299579Z"
+    }
+  ],
+  "users": []
+}
