@@ -1,0 +1,52 @@
+﻿@page
+@model RowdyHacks25.Pages.CreateBountyModel
+@{
+    ViewData["Title"] = "Post a New Bounty";
+}
+<div class="bounty-form">
+    <h1>🪐 Post a New Bounty</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="TargetName" class="form-label">Target Name</label>
+            <input asp-for="NewBounty.TargetName" class="form-control" placeholder="Ex: Zarnax the Plasma Thief" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Planet" class="form-label">Last Known Planet</label>
+            <input asp-for="NewBounty.Planet" class="form-control" placeholder="Ex: Vega-9" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Reward" class="form-label">Reward (₡)</label>
+            <input asp-for="NewBounty.Reward" type="number" class="form-control" min="0" step="100" placeholder="Ex: 5000" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="DangerLevel" class="form-label">Danger Level</label>
+            <select asp-for="NewBounty.DangerLevel" class="form-select">
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+                <option>Extreme</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="ImageUrl" class="form-label">Image Address (URL)</label>
+            <input asp-for="NewBounty.ImageUrl" type="url" class="form-control" placeholder="https://example.com/wanted.png" />
+        </div>
+
+        <div class="mb-3">
+            <label for="Bio" class="form-label">Biography / Details</label>
+            <textarea asp-for="NewBounty.Bio" class="form-control" rows="6" placeholder="Long-form details about the target, background story, sightings, notes..."></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="ManagerId" class="form-label">Owner ID (Optional)</label>
+            <input asp-for="NewBounty.ManagerId" class="form-control" placeholder="Your secret identifier (leave blank for anonymous)" />
+            <small class="text-muted" style="color: #ff9500 !important;">This ID will be securely hashed - use the same ID to manage your bounties later</small>
+        </div>
+
+        <button type="submit" class="btn btn-submit">Post Bounty</button>
+    </form>
+</div>
