@@ -1,0 +1,38 @@
+﻿@page
+@model RowdyHacks25.Pages.UserPageModel
+@{
+}
+
+<h2>Users</h2>
+
+@if (Model.Users == null || Model.Users.Count == 0)
+{
+	<p>No users found.</p>
+}
+else
+{
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Username</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+		@foreach (var u in Model.Users)
+		{
+			<tr>
+				<td>@u.Id</td>
+				<td>@u.UserName</td>
+				<td>
+					<form method="post">
+						<input type="hidden" name="id" value="@u.Id" />
+						<button type="submit" name="handler" value="Delete" class="btn btn-danger btn-sm" onclick="return confirm('Delete user');">Delete</button>
+					</form>
+				</td>
+			</tr>
+		}
+		</tbody>
+	</table>
+}

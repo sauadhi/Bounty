@@ -1,0 +1,119 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Rowdy Bounty</title>
+
+    <style>
+        /* Rio Grande font for the Project*/
+        @font-face {
+            font-family: "Rio Grande Striped";
+            src: url("./fonts/RioGrande-Striped.tff") format("tff"), url("./fonts/RioGrande-Striped.tff") format("tff"), url("./fonts/RioGrande-Striped.ttf") format("truetype");
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Basic page styling */
+        :root {
+            --accent: #D5BF98;
+            --bg: %804F53;
+            --text: #D5BF98;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 48px auto;
+            padding: 32px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,250,0.9));
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(20,20,20,0.06);
+        }
+
+        /* Use Rio Grande for headings */
+        h1, h2 {
+            font-family: "Rio Grande", "Rio Grande Striped", Georgia, "Times New Roman", serif;
+            letter-spacing: 0.02em;
+            margin: 0 0 12px 0;
+            color: var(--accent);
+        }
+
+        p.lead {
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+        }
+
+        /* Example of decorative striped title */
+        .striped {
+            font-family: "Rio Grande Striped", "Rio Grande", serif;
+            font-size: 2.2rem;
+            letter-spacing: 0.04em;
+            margin-bottom: 12px;
+        }
+
+        footer {
+            margin-top: 28px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .sample {
+            margin-top: 18px;
+            padding: 18px;
+            border-radius: 8px;
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        /* Make headlines responsive */
+        @media (min-width:900px) {
+            h1 {
+                font-size: 3.4rem;
+            }
+
+            .striped {
+                font-size: 3.6rem;
+            }
+        }
+
+        @media (max-width:899px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            .striped {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="striped">RIO GRANDE</div>
+        <h1>Rowdy Bounty</h1>
+        <p class="lead">This page demonstrates using the Rio Grande display font via <code>@font-face</code>. Replace the font files in <code>./fonts/</code> with the TTF/WOFF/WOFF2 files you downloaded.</p>
+
+        <div class="sample">
+            <h2>Heading set with Rio Grande</h2>
+            <p>Rio Grande is a bold, decorative display font best for headlines and logos — not for long body text. Use a readable serif or sans-serif for paragraphs. The CSS above uses <code>font-display: swap</code> to avoid invisible text while the font loads.</p>
+
+            <p style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;">
+                Example body copy (system font fallback) — keep long paragraphs in system or web-safe fonts for readability.
+            </p>
+        </div>
+
+        <footer>
+            Tip: check the font license before using commercially. See notes below.
+        </footer>
+    </div>
+</body>
+</html>

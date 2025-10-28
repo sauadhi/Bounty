@@ -1,0 +1,47 @@
+﻿@page
+@model RowdyHacks25.Pages.SearchModel
+@{
+    ViewData["Title"] = "Search";
+}
+<div class="space-card">
+    <form method="get" class="search-form">
+        <input type="text" name="q" id="query" value="@Model.q" placeholder="Search bounties by name, planet, danger, status..." style="flex:1;" />
+        <button type="submit" class="btn" id="searchBtn">🔍 Search</button>
+    </form>
+    @if(!string.IsNullOrWhiteSpace(Model.q))
+    {
+        <div class="intro-text">
+            @Model.numberOfBounties bount@(Model.numberOfBounties == 1 ? "y" : "ies") found for "<strong>@Model.q</strong>"
+            @if (Model.bounties.Any())
+            {
+                <div class="row g-4">
+                    @foreach (var b in @Model.bounties)
+                    {
+                        <div class="col-md-4">
+                            <div class="space-card h-100" style="margin: 0; background-color: rgba(25, 25, 60, 0.5);">
+                                @{
+                                    var img = string.IsNullOrWhiteSpace(b.ImageUrl)
+                                    ? "https://placehold.co/400x300?text=Wanted"
+                                    : b.ImageUrl;
+                                }
+                                <img src="@img" alt="@b.TargetName" class="img-fluid mb-3" style="width:100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px;" />
+
+                                <h3 style="color: #ff9500; font-size: 1.5rem;">@b.TargetName</h3>
+                                <div class="mb-2"><strong>Planet:</strong> @b.Planet</div>
+                                <div class="mb-2" style="color: #ffd700; font-size: 1.2rem;"><strong>Reward:</strong> ₡@b.Reward</div>
+                                <div class="mb-3">
+                                    <span class="badge bg-warning text-dark">@b.DangerLevel</span>
+                                </div>
+
+                                <div class="d-flex gap-2">
+                                    <a href="/ViewBounty?id=@b.Id" class="space-btn">View Details</a>
+                                    <a href="/EditBounty?id=@b.Id" class="space-btn" style="background-color: #2d6da3;">Edit</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    }
+</div>
